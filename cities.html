@@ -27,7 +27,89 @@
             border: 1px solid #ccc;
             padding: 10px;
         }
+        
+        .container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .row {
+            margin-bottom: 10px;
+        }
+
+        .col-sm-2,
+        .col-md {
+            border: 1px solid #7010ee;
+            padding: 10px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            max-width: 300px;
+            margin-bottom: 10px;
+        }
+
+        .thumbnail-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .thumbnail-container img {
+            width: 100px;
+            height: auto;
+            margin-top: 10px;
+        }
+
+        .table-bordered {
+            border: 3px solid rgb(88, 62, 253);
+        }
+
+        .table-bordered th {
+            table-layout: fixed;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .table-bordered td {
+            text-align: center;
+        }
+
+        .table-striped-custom tbody tr:nth-child(odd) {
+          background-color: #c41532; 
+      }
+
+       
+        .table-bordered tbody tr:hover td {
+            background-color: #63c7e2;
+            color: #fff;
+        }
+
+        .table-bordered th {
+            background-color: #6ecadfd0;
+            color: rgb(255, 255, 255);
+        }
+
+        .table-bordered th:hover {
+            background-color: #33d6c9;
+            color: #df1f1f;
+        }
+
+        .table-bordered th,
+        .table-bordered td {
+            padding: 10px 150px;
+        }
+
+        
+       
     </style>
+    
     
 </head>
 <body>
@@ -52,6 +134,73 @@
         </div>
     </div>
     <p>When I tried to reduce the page size I observed that the row with city names is gonna break first which implies "when we use a col grid command of sm and md the md will breaks before the row with sm.</p>
+    <div class="image-container">
+        <img class="img-fluid" src="oslo.jpg" alt="OSLO" height="auto" width="300">
+        <img class="img-fluid" src="paris.jpg"  alt="PARIS"  height="auto" width="300">
+        <img class="img-fluid" src="toronto.jpg"  alt="TORONTO"  height="auto" width="300">
+        </div><br>
+  
+        <div class="thumbnail-container">
+          <img class="img-thumbnail" src="oslo.jpg" alt="OSLO" >
+          <img class="img-thumbnail" src="paris.jpg"alt="PARIS"  >
+          <img class="img-thumbnail" src="toronto.jpg" alt="TORONTO" >
+        </div><br>
+  
+        <br>
+        <br>
+        <hr>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped caption-top">
+                <caption><center><strong>MARKUP ON CITIES</strong></center></caption>
+                <thead>
+                    <tr>
+                        <th scope="col">LETTER</th>
+                        <th scope="col">CITY</th>
+                        <th scope="col">RIVER</th>
+                        <th scope="col">TREE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">G</th>
+                        <td>Gothenburg</td>
+                        <td>Göta älv</td>
+                        <td>Golden Chain Tree</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">O</th>
+                        <td>Oslo</td>
+                        <td>Otra</td>
+                        <td>Oak Tree</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">T</th>
+                        <td>Tokyo</td>
+                        <td>Tama River</td>
+                        <td>Tulip Tree</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">T</th>
+                        <td>Toronto</td>
+                        <td>Toronto Islands</td>
+                        <td>Thornless Honeylocust Tree</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">I</th>
+                        <td>Istanbul</td>
+                        <td>İstanbul Strait</td>
+                        <td>Italian Cypress Tree</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">P</th>
+                        <td>Paris</td>
+                        <td>Seine River</td>
+                        <td>Platanus Tree</td>
+                    </tr>
     
+                    
+                </tbody>
+            </table>
+        </div>
 </body>
 </html>
